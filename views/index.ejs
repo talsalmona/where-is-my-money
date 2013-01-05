@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body dir="rtl">
+
+	<div class="container">
+		<h2>לאיפה הולך הכסף שלי?</h2>
+		<p>אז מה עושים עם הכסף שאתם משלמים למס הכנסה?</p>
+		<form action="/" method="GET" >
+		  <fieldset>
+		    <input type="text" class="input-medium search-query" placeholder="מס הכנסה" value="<%=salary%>" name="salary">
+		    <button type="submit" class="btn btn-large btn-primary">איפה הכסף?</button>
+		  </fieldset>
+		</form>
+
+		<table class="table table-striped">
+			<%= result %>
+		</table>
+	</div>
+
+    <script src="/js/bootstrap.min.js"></script>
+  </body>
+</html>
