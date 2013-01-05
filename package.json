@@ -1,0 +1,10 @@
+{ 
+	"name" : "wimm",
+	"description" : "Where is my money", 
+	"private": true,
+	"version" : "0.0.1", 
+	"dependencies" : { 
+		"request" : "2.x",
+		"express": "3.x"
+	} 
+}
