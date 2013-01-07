@@ -45,15 +45,16 @@ app.get('/', function(req, res){
   			for (var i = 1; i < data.length; i++) {
   				var title = data[i].title
   				var amount = data[i].net_amount_allocated
-  				var ratio = amount / total
-  				var salary_to_departmet = ratio*salary;
+  				var ratio = (amount / total).toFixed(2)
+  				var salary_to_departmet = ratio*salary
   				var budget_id = data[i].budget_id
   				if (salary_to_departmet > 0) {
-  					content += "<tr><td><a href='/?salary=" + salary_to_departmet + "&id=" + budget_id + "'>" + title + "</a></td><td>" + salary_to_departmet + "</td></tr>"	
+  					content += "<tr><td><a href='/?salary=" + salary_to_departmet + "&id=" + budget_id + "'>" + title + "</a></td><td>" + salary_to_departmet.toFixed(2) + "</td></tr>"	
   				}
   			}
         res.render('index', {
           title: 'איפה הכסף - ' + department,
+          department: department,
           result: content,
           salary: salary
         });        
